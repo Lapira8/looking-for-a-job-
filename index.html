@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Looking for a job 🔭 | O Teu Mapa de Emprego em Angola</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: #fdfdfd; }
+        .google-blue { color: #1a73e8; }
+        .bg-google-blue { background-color: #1a73e8; }
+        .glass-header { background: rgba(255, 255, 255, 0.8); backdrop-filter: blur(12px); }
+        .map-area {
+            background: #e5e9f0;
+            background-image: radial-gradient(#1a73e8 0.5px, transparent 0.5px);
+            background-size: 24px 24px;
+        }
+    </style>
+</head>
+<body class="text-slate-900">
+
+    <header class="glass-header sticky top-0 z-40 border-b border-gray-100 px-6 py-4">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <div class="flex items-center gap-2">
+                <span class="text-3xl">🔭</span>
+                <div>
+                    <h1 class="text-xl font-extrabold tracking-tight leading-none">Looking for a <span class="google-blue">job</span></h1>
+                    <p class="text-[9px] font-black text-gray-400 uppercase tracking-widest mt-1">Angola • 21 Unidades Territoriais</p>
+                </div>
+            </div>
+            <div class="flex items-center gap-3">
+                <div class="hidden sm:block text-right">
+                    <p class="text-[10px] font-bold text-gray-400 uppercase">Estado da Rede</p>
+                    <p class="text-xs font-bold text-green-500 flex items-center gap-1 justify-end">
+                        <span class="w-2 h-2 bg-green-500 rounded-full animate-pulse"></span> IA Activa
+                    </p>
+                </div>
+                <div class="w-10 h-10 rounded-full bg-blue-50 border border-blue-100 flex items-center justify-center text-blue-600 font-bold">A</div>
+            </div>
+        </div>
+    </header>
+
+    <main class="max-w-6xl mx-auto p-6 md:p-10">
+        
+        <div class="bg-white rounded-[2.5rem] shadow-2xl shadow-blue-100/50 p-8 border border-gray-50 mb-10">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                
+                <div class="space-y-2">
+                    <label class="text-[11px] font-black text-blue-600 uppercase tracking-widest ml-1">Província (Capitais Actualizadas)</label>
+                    <select id="provincia" class="w-full p-4 bg-gray-50 border-2 border-transparent focus:border-blue-500 rounded-2xl outline-none transition-all font-bold text-slate-700 appearance-none shadow-sm">
+                        <option value="Caxito">Bengo (Caxito)</option>
+                        <option value="Benguela">Benguela (Benguela)</option>
+                        <option value="Cuito">Bié (Cuíto)</option>
+                        <option value="Cabinda">Cabinda (Cabinda)</option>
+                        <option value="Mavinga">Cuando (Mavinga) 🌟</option>
+                        <option value="Menongue">Cubango (Menongue) 🌟</option>
+                        <option value="Ndalatando">Cuanza Norte (Ndalatando)</option>
+                        <option value="Sumbe">Cuanza Sul (Sumbe)</option>
+                        <option value="Ondjiva">Cunene (Ondjiva)</option>
+                        <option value="Huambo">Huambo (Huambo)</option>
+                        <option value="Lubango">Huíla (Lubango)</option>
+                        <option value="Catete">Ícolo e Bengo (Catete) 🌟</option>
+                        <option value="Luanda" selected>Luanda (Luanda)</option>
+                        <option value="Dundo">Lunda Norte (Dundo)</option>
+                        <option value="Saurimo">Lunda Sul (Saurimo)</option>
+                        <option value="Malanje">Malanje (Malanje)</option>
+                        <option value="Luena">Moxico (Luena)</option>
+                        <option value="Cazombo">Moxico Leste (Cazombo) 🌟</option>
+                        <option value="Moçâmedes">Namibe (Moçâmedes)</option>
+                        <option value="Uíge">Uíge (Uíge)</option>
+                        <option value="MbanzaKongo">Zaire (Mbanza Kongo)</option>
+                    </select>
+                </div>
+
+                <div class="space-y-2">
+                    <label class="text-[11px] font-black text-blue-600 uppercase tracking-widest ml-1">Área Profissional</label>
+                    <select class="w-full p-4 bg-gray-50 border-2 border-transparent focus:border-blue-500 rounded-2xl outline-none transition-all font-bold text-slate-700 appearance-none shadow-sm">
+                        <option>Geral (Ver Tudo)</option>
+                        <option>Indústria e Energia</option>
+                        <option>Agronegócio</option>
+                        <option>Finanças e Gestão</option>
+                        <option>Tecnologia / Digital</option>
+                    </select>
+                </div>
+
+                <div class="flex items-end">
+                    <button onclick="iniciarMapeamento()" class="w-full bg-google-blue text-white p-4 rounded-2xl font-black text-sm uppercase tracking-[0.2em] shadow-lg shadow-blue-200 hover:scale-[1.02] active:scale-95 transition-all">
+                        Mapear Vagas
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div id="map-frame" class="w-full h-[550px] rounded-[3rem] border-[12px] border-white shadow-2xl overflow-hidden relative map-area flex items-center justify-center">
+            <div class="text-center bg-white/60 p-10 rounded-full backdrop-blur-md">
+                <span class="text-5xl block mb-4">📍</span>
+                <p class="text-slate-500 font-bold uppercase tracking-widest text-xs italic">Escolha os filtros para carregar o mapa</p>
+            </div>
+        </div>
+
+        <div class="mt-12 bg-slate-900 rounded-[2.5rem] p-10 text-white flex flex-col md:flex-row items-center justify-between gap-8 relative overflow-hidden">
+            <div class="relative z-10">
+                <h3 class="text-3xl font-extrabold leading-tight">Publicação Directa <br><span class="text-blue-400">no Mapa.</span></h3>
+                <p class="text-slate-400 mt-4 max-w-sm">Destaque a sua empresa para milhares de candidatos em tempo real através da nossa IA.</p>
+            </div>
+            <div class="relative z-10 bg-white/5 border border-white/10 p-6 rounded-3xl text-right backdrop-blur-xl">
+                <span class="text-[10px] font-black text-blue-400 uppercase tracking-widest block mb-1">Terminal de Pagamento</span>
+                <div class="text-3xl font-mono font-black mb-1">936 842 261</div>
+                <div class="px-3 py-1 bg-blue-500/20 text-blue-400 rounded-lg inline-block text-[10px] font-bold">PayPay AO</div>
+            </div>
+        </div>
+
+    </main>
+
+    <div id="ad-modal" class="fixed inset-0 bg-slate-950/90 z-50 flex hidden items-center justify-center p-4 backdrop-blur-md">
+        <div class="bg-white w-full max-w-lg rounded-[3rem] overflow-hidden shadow-2xl">
+            <div class="p-10 text-center">
+                <div class="w-16 h-16 bg-blue-50 rounded-2xl flex items-center justify-center mx-auto mb-6">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z" />
+                    </svg>
+                </div>
+                
+                <h2 class="text-2xl font-black text-slate-800 mb-2 leading-none">A processar o Mapa...</h2>
+                <p class="text-slate-500 text-sm mb-8">Aguarde pela verificação de segurança da IA.</p>
+
+                <div class="w-full aspect-video bg-slate-50 rounded-3xl mb-8 flex items-center justify-center border-2 border-dashed border-slate-200">
+                    <p class="text-slate-400 text-xs font-bold uppercase tracking-widest">Espaço de Publicidade (Google AdSense)</p>
+                </div>
+
+                <div id="timer" class="text-4xl font-black text-blue-600 mb-8">5</div>
+
+                <button id="btn-final" disabled class="w-full py-5 bg-slate-100 text-slate-400 rounded-2xl font-black uppercase tracking-[0.2em] text-sm transition-all cursor-not-allowed">
+                    Aceder agora
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function iniciarMapeamento() {
+            const modal = document.getElementById('ad-modal');
+            const timer = document.getElementById('timer');
+            const btn = document.getElementById('btn-final');
+            let tempo = 5;
+
+            modal.classList.remove('hidden');
+            
+            const contagem = setInterval(() => {
+                tempo--;
+                timer.innerText = tempo;
+                if(tempo <= 0) {
+                    clearInterval(contagem);
+                    btn.disabled = false;
+                    btn.classList.replace('bg-slate-100', 'bg-google-blue');
+                    btn.classList.replace('text-slate-400', 'text-white');
+                    btn.innerText = "VER VAGAS ACTUALIZADAS";
+                    timer.innerHTML = "✨";
+                }
+            }, 1000);
+        }
+
+        document.getElementById('btn-final').onclick = () => {
+            const prov = document.getElementById('provincia').value;
+            const map = document.getElementById('map-frame');
+            document.getElementById('ad-modal').classList.add('hidden');
+            
+            map.innerHTML = `
+                <div class="absolute inset-0 bg-blue-50 flex items-center justify-center flex-col animate-in fade-in duration-700">
+                    <div class="w-16 h-16 border-4 border-blue-600 border-t-transparent rounded-full animate-spin mb-4"></div>
+                    <p class="text-blue-900 font-black uppercase tracking-widest text-sm">IA a geolocalizar vagas em ${prov}...</p>
+                </div>
+            `;
+        }
+    </script>
+</body>
+</html>
