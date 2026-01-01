@@ -8,10 +8,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&display=swap" rel="stylesheet">
     <style>
         body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: #fdfdfd; }
-        .google-blue { color: #1a73e8; }
-        .bg-google-blue { background-color: #1a73e8; }
+        .google-green { color: #34a853; } /* Substituído Azul por Verde */
+        .bg-google-green { background-color: #34a853; }
         .glass-header { background: rgba(255, 255, 255, 0.9); backdrop-filter: blur(12px); }
-        .map-area { background: #f1f4f9; background-image: radial-gradient(#1a73e8 0.5px, transparent 0.5px); background-size: 30px 30px; }
+        .map-area { background: #f1f9f3; background-image: radial-gradient(#34a853 0.5px, transparent 0.5px); background-size: 30px 30px; }
         #map-frame { min-height: 550px; }
     </style>
 </head>
@@ -22,21 +22,21 @@
             <div class="flex items-center gap-2">
                 <span class="text-3xl">🔭</span>
                 <div>
-                    <h1 class="text-xl font-extrabold tracking-tight leading-none">Looking for a <span class="google-blue">job</span></h1>
+                    <h1 class="text-xl font-extrabold tracking-tight leading-none">Looking for a <span class="google-green">job</span></h1>
                     <p class="text-[9px] font-black text-gray-400 uppercase tracking-widest mt-1">Angola • 21 Unidades Territoriais</p>
                 </div>
             </div>
-            <div class="w-10 h-10 rounded-full bg-blue-50 border border-blue-100 flex items-center justify-center text-blue-600 font-bold shadow-sm">P</div>
+            <div class="w-10 h-10 rounded-full bg-green-50 border border-green-100 flex items-center justify-center text-green-600 font-bold shadow-sm">P</div>
         </div>
     </header>
 
     <main class="max-w-6xl mx-auto p-6 md:p-10">
         
-        <div class="bg-white rounded-[2.5rem] shadow-2xl shadow-blue-100/50 p-8 border border-gray-50 mb-10">
+        <div class="bg-white rounded-[2.5rem] shadow-2xl shadow-green-100/50 p-8 border border-gray-50 mb-10">
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
                 <div class="space-y-2">
-                    <label class="text-[11px] font-black text-blue-600 uppercase tracking-widest ml-1">Província (Filtro IA)</label>
-                    <select id="provincia" class="w-full p-4 bg-gray-50 border-2 border-transparent focus:border-blue-500 rounded-2xl outline-none transition-all font-bold text-slate-700 shadow-sm">
+                    <label class="text-[11px] font-black text-green-600 uppercase tracking-widest ml-1">Província (Filtro IA)</label>
+                    <select id="provincia" class="w-full p-4 bg-gray-50 border-2 border-transparent focus:border-green-500 rounded-2xl outline-none transition-all font-bold text-slate-700 shadow-sm">
                         <option value="Bengo">Bengo</option>
                         <option value="Benguela">Benguela</option>
                         <option value="Bié">Bié</option>
@@ -62,18 +62,18 @@
                 </div>
 
                 <div class="space-y-2">
-                    <label class="text-[11px] font-black text-blue-600 uppercase tracking-widest ml-1">Área Profissional</label>
-                    <select class="w-full p-4 bg-gray-50 border-2 border-transparent focus:border-blue-500 rounded-2xl outline-none transition-all font-bold text-slate-700 shadow-sm">
+                    <label class="text-[11px] font-black text-green-600 uppercase tracking-widest ml-1">Área Profissional</label>
+                    <select class="w-full p-4 bg-gray-50 border-2 border-transparent focus:border-green-500 rounded-2xl outline-none transition-all font-bold text-slate-700 shadow-sm">
                         <option>Geral (Todas as Vagas)</option>
                         <option>Mineração e Indústria</option>
-                        <option>Agricultura e Pescas</option>
+                        <option>Agronegócio e Pescas</option>
                         <option>Banca e Seguros</option>
                         <option>Tecnologia e Serviços</option>
                     </select>
                 </div>
 
                 <div class="flex items-end">
-                    <button onclick="iniciarMapeamento()" class="w-full bg-google-blue text-white p-4 rounded-2xl font-black text-sm uppercase tracking-[0.2em] shadow-lg shadow-blue-200 hover:scale-[1.01] transition-all">
+                    <button onclick="iniciarMapeamento()" class="w-full bg-google-green text-white p-4 rounded-2xl font-black text-sm uppercase tracking-[0.2em] shadow-lg shadow-green-200 hover:scale-[1.01] transition-all">
                         Mapear Vagas
                     </button>
                 </div>
@@ -89,11 +89,11 @@
 
         <div class="mt-12 bg-slate-900 rounded-[2.5rem] p-10 text-white flex flex-col md:flex-row items-center justify-between gap-8">
             <div>
-                <h3 class="text-3xl font-extrabold leading-tight text-blue-400">Publicação Directa.</h3>
+                <h3 class="text-3xl font-extrabold leading-tight text-green-400">Publicação Direta.</h3>
                 <p class="text-slate-400 mt-2 max-w-sm font-medium italic">Desenvolvido por Pascoal Barros in Frondosa Agronomic-Digital.</p>
             </div>
             <div class="bg-white/5 border border-white/10 p-6 rounded-3xl text-right">
-                <span class="text-[10px] font-black text-blue-400 uppercase tracking-widest block mb-1">PayPay AO: pascoalbarros58@gmail.com</span>
+                <span class="text-[10px] font-black text-green-400 uppercase tracking-widest block mb-1">AIRTM: pascoalbarros58@gmail.com</span>
                 <div class="text-2xl font-mono font-black text-white">936 842 261</div>
             </div>
         </div>
@@ -102,13 +102,10 @@
     <div id="ad-modal" class="fixed inset-0 bg-slate-950/90 z-50 flex hidden items-center justify-center p-4 backdrop-blur-md">
         <div class="bg-white w-full max-w-lg rounded-[3rem] overflow-hidden shadow-2xl p-10 text-center border-8 border-white">
             <h2 class="text-2xl font-black text-slate-800 mb-2">Processando Mapa...</h2>
-            <p class="text-[10px] font-bold text-slate-400 uppercase tracking-widest mb-6">Verificação de Segurança e Publicidade</p>
-            
             <div class="w-full aspect-video bg-slate-50 rounded-3xl mb-6 flex items-center justify-center border-2 border-dashed border-slate-200">
-                <p class="text-slate-400 text-[10px] font-black uppercase tracking-widest">Espaço Publicitário Google AdSense</p>
+                <p class="text-slate-400 text-[10px] font-black uppercase tracking-widest text-green-600">Espaço Publicitário</p>
             </div>
-
-            <div id="timer" class="text-6xl font-black text-blue-600 mb-8 font-mono">5</div>
+            <div id="timer" class="text-6xl font-black text-green-600 mb-8 font-mono">5</div>
             <button id="btn-final" disabled class="w-full py-5 bg-slate-100 text-slate-400 rounded-2xl font-black uppercase tracking-widest text-xs transition-all cursor-not-allowed">
                 Aguarde a IA carregar
             </button>
@@ -116,8 +113,8 @@
     </div>
 
     <script>
-        // LIGAÇÃO OFICIAL AO GOOGLE SCRIPT
-        const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbycqzPTvHiv7otMzEA1kHL8fdnE3HiTUPLxIgAd5-q7v1e8FYav5RM1At5narI57phX/exec"; 
+        // LIGAÇÃO OFICIAL ACTUALIZADA
+        const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbxL4tIKu-_bOBpzdpO53TuIDvipBKfF_YJ8F34QejV9W0rkC5d3OepucMfLt8_5FR9E/exec"; 
 
         async function iniciarMapeamento() {
             const modal = document.getElementById('ad-modal');
@@ -126,17 +123,15 @@
             let tempo = 5;
 
             modal.classList.remove('hidden');
-            
             const contagem = setInterval(() => {
                 tempo--;
                 timer.innerText = tempo;
                 if(tempo <= 0) {
                     clearInterval(contagem);
                     btn.disabled = false;
-                    btn.classList.replace('bg-slate-100', 'bg-google-blue');
+                    btn.classList.replace('bg-slate-100', 'bg-google-green');
                     btn.classList.replace('text-slate-400', 'text-white');
                     btn.innerText = "Aceder às Vagas";
-                    timer.innerHTML = "✓";
                 }
             }, 1000);
 
@@ -145,11 +140,10 @@
                 const map = document.getElementById('map-frame');
                 modal.classList.add('hidden');
                 
-                map.innerHTML = `
-                    <div class="absolute inset-0 bg-blue-50 flex items-center justify-center flex-col p-10 animate-pulse">
-                        <div class="w-12 h-12 border-4 border-blue-600 border-t-transparent rounded-full animate-spin mb-4"></div>
-                        <p class="text-blue-900 font-black uppercase tracking-widest text-[11px]">Busca profunda activa em ${prov}...</p>
-                    </div>`;
+                map.innerHTML = `<div class="absolute inset-0 bg-green-50 flex items-center justify-center flex-col p-10 animate-pulse">
+                    <div class="w-12 h-12 border-4 border-green-600 border-t-transparent rounded-full animate-spin mb-4"></div>
+                    <p class="text-green-900 font-black uppercase tracking-widest text-[11px]">Busca profunda activa em ${prov}...</p>
+                </div>`;
 
                 try {
                     const response = await fetch(GOOGLE_SCRIPT_URL);
@@ -157,31 +151,29 @@
                     const filtradas = vagas.filter(v => v.provincia === prov);
 
                     if (filtradas.length === 0) {
-                        map.innerHTML = `
-                            <div class="text-center p-20 bg-slate-50 w-full h-full flex flex-col items-center justify-center">
-                                <span class="text-5xl block mb-4">🔭</span>
-                                <p class="text-slate-400 font-black uppercase text-[11px] tracking-widest">Nenhuma vaga registada em ${prov} nas últimas 24h.</p>
-                                <p class="text-blue-500 text-[10px] font-bold mt-2">A IA continua a monitorizar novos anúncios.</p>
-                            </div>`;
+                        map.innerHTML = `<div class="text-center p-20 flex flex-col items-center justify-center">
+                            <span class="text-5xl block mb-4">🔭</span>
+                            <p class="text-slate-400 font-black uppercase text-[11px]">Sem vagas registadas em ${prov}.</p>
+                        </div>`;
                         return;
                     }
 
                     map.innerHTML = `<div class="grid grid-cols-1 md:grid-cols-2 gap-4 p-8 overflow-y-auto h-full w-full bg-slate-50">`;
                     filtradas.forEach(v => {
                         map.innerHTML += `
-                            <div class="bg-white p-6 rounded-[2.5rem] shadow-sm border border-blue-50 flex justify-between items-center hover:border-blue-400 transition-all group">
+                            <div class="bg-white p-6 rounded-[2.5rem] shadow-sm border border-green-50 flex justify-between items-center hover:border-green-400 transition-all">
                                 <div>
-                                    <h4 class="font-extrabold text-slate-800 text-sm group-hover:text-blue-600">${v.cargo}</h4>
-                                    <p class="text-[10px] text-slate-400 font-bold uppercase tracking-tighter">${v.empresa} • ${v.capital}</p>
+                                    <h4 class="font-extrabold text-slate-800 text-sm">${v.cargo}</h4>
+                                    <p class="text-[10px] text-slate-400 font-bold uppercase">${v.empresa} • ${v.capital}</p>
                                 </div>
-                                <span class="px-3 py-1 rounded-full text-[9px] font-black uppercase ${v.status === 'Pago' ? 'bg-orange-100 text-orange-600' : 'bg-blue-100 text-blue-600'}">
+                                <span class="px-3 py-1 rounded-full text-[9px] font-black uppercase ${v.status === 'Pago' ? 'bg-orange-100 text-orange-600' : 'bg-green-100 text-green-600'}">
                                     ${v.status === 'Pago' ? '⭐ VIP' : '✓ IA Verificada'}
                                 </span>
                             </div>`;
                     });
                     map.innerHTML += `</div>`;
                 } catch (e) {
-                    map.innerHTML = `<div class="p-10 text-center"><p class="text-red-500 text-[10px] font-black uppercase">Erro de Ligação à Base de Dados. Verifique o seu Google Script.</p></div>`;
+                    map.innerHTML = `<div class="p-10 text-center"><p class="text-red-500 text-[10px] font-black">Erro de Ligação à Base de Dados.</p></div>`;
                 }
             }
         }
