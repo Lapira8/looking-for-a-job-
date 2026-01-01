@@ -35,40 +35,40 @@
         <div class="bg-white rounded-[2.5rem] shadow-2xl shadow-blue-100/50 p-8 border border-gray-50 mb-10">
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
                 <div class="space-y-2">
-                    <label class="text-[11px] font-black text-blue-600 uppercase tracking-widest ml-1">Província (Capitais Oficiais)</label>
+                    <label class="text-[11px] font-black text-blue-600 uppercase tracking-widest ml-1">Província (Filtro IA)</label>
                     <select id="provincia" class="w-full p-4 bg-gray-50 border-2 border-transparent focus:border-blue-500 rounded-2xl outline-none transition-all font-bold text-slate-700 shadow-sm">
-                        <option value="Bengo">Bengo (Caxito)</option>
-                        <option value="Benguela">Benguela (Benguela)</option>
-                        <option value="Bié">Bié (Cuíto)</option>
-                        <option value="Cabinda">Cabinda (Cabinda)</option>
-                        <option value="Cuando">Cuando (Mavinga) 🌟</option>
-                        <option value="Cubango">Cubango (Menongue) 🌟</option>
-                        <option value="Cuanza Norte">Cuanza Norte (Ndalatando)</option>
-                        <option value="Cuanza Sul">Cuanza Sul (Sumbe)</option>
-                        <option value="Cunene">Cunene (Ondjiva)</option>
-                        <option value="Huambo">Huambo (Huambo)</option>
-                        <option value="Huíla">Huíla (Lubango)</option>
-                        <option value="Ícolo e Bengo">Ícolo e Bengo (Catete) 🌟</option>
-                        <option value="Luanda" selected>Luanda (Luanda)</option>
-                        <option value="Lunda Norte">Lunda Norte (Dundo)</option>
-                        <option value="Lunda Sul">Lunda Sul (Saurimo)</option>
-                        <option value="Malanje">Malanje (Malanje)</option>
-                        <option value="Moxico">Moxico (Luena)</option>
-                        <option value="Moxico Leste">Moxico Leste (Cazombo) 🌟</option>
-                        <option value="Namibe">Namibe (Moçâmedes)</option>
-                        <option value="Uíge">Uíge (Uíge)</option>
-                        <option value="Zaire">Zaire (Mbanza Kongo)</option>
+                        <option value="Bengo">Bengo</option>
+                        <option value="Benguela">Benguela</option>
+                        <option value="Bié">Bié</option>
+                        <option value="Cabinda">Cabinda</option>
+                        <option value="Cuando">Cuando 🌟</option>
+                        <option value="Cubango">Cubango 🌟</option>
+                        <option value="Cuanza Norte">Cuanza Norte</option>
+                        <option value="Cuanza Sul">Cuanza Sul</option>
+                        <option value="Cunene">Cunene</option>
+                        <option value="Huambo">Huambo</option>
+                        <option value="Huíla">Huíla</option>
+                        <option value="Ícolo e Bengo">Ícolo e Bengo 🌟</option>
+                        <option value="Luanda" selected>Luanda</option>
+                        <option value="Lunda Norte">Lunda Norte</option>
+                        <option value="Lunda Sul">Lunda Sul</option>
+                        <option value="Malanje">Malanje</option>
+                        <option value="Moxico">Moxico</option>
+                        <option value="Moxico Leste">Moxico Leste 🌟</option>
+                        <option value="Namibe">Namibe</option>
+                        <option value="Uíge">Uíge</option>
+                        <option value="Zaire">Zaire</option>
                     </select>
                 </div>
 
                 <div class="space-y-2">
                     <label class="text-[11px] font-black text-blue-600 uppercase tracking-widest ml-1">Área Profissional</label>
                     <select class="w-full p-4 bg-gray-50 border-2 border-transparent focus:border-blue-500 rounded-2xl outline-none transition-all font-bold text-slate-700 shadow-sm">
-                        <option>Geral (Ver Tudo)</option>
-                        <option>Indústria e Energia</option>
-                        <option>Agronegócio</option>
-                        <option>Finanças e Gestão</option>
-                        <option>Tecnologia / Digital</option>
+                        <option>Geral (Todas as Vagas)</option>
+                        <option>Mineração e Indústria</option>
+                        <option>Agricultura e Pescas</option>
+                        <option>Banca e Seguros</option>
+                        <option>Tecnologia e Serviços</option>
                     </select>
                 </div>
 
@@ -83,7 +83,7 @@
         <div id="map-frame" class="w-full rounded-[3rem] border-[12px] border-white shadow-2xl overflow-hidden relative map-area flex items-center justify-center">
             <div class="text-center bg-white/60 p-10 rounded-full backdrop-blur-md">
                 <span class="text-5xl block mb-4">📍</span>
-                <p class="text-slate-500 font-bold uppercase tracking-widest text-[10px] italic">Selecione a província para ver as vagas</p>
+                <p class="text-slate-500 font-bold uppercase tracking-widest text-[10px] italic">Escolha a província para iniciar a busca profunda</p>
             </div>
         </div>
 
@@ -93,27 +93,31 @@
                 <p class="text-slate-400 mt-2 max-w-sm font-medium italic">Desenvolvido por Pascoal Barros in Frondosa Agronomic-Digital.</p>
             </div>
             <div class="bg-white/5 border border-white/10 p-6 rounded-3xl text-right">
-                <span class="text-[10px] font-black text-blue-400 uppercase tracking-widest block mb-1">PayPay AO (936 842 261)</span>
-                <div class="text-2xl font-mono font-black text-white">pascoalbarros58@gmail.com</div>
+                <span class="text-[10px] font-black text-blue-400 uppercase tracking-widest block mb-1">PayPay AO: pascoalbarros58@gmail.com</span>
+                <div class="text-2xl font-mono font-black text-white">936 842 261</div>
             </div>
         </div>
     </main>
 
     <div id="ad-modal" class="fixed inset-0 bg-slate-950/90 z-50 flex hidden items-center justify-center p-4 backdrop-blur-md">
-        <div class="bg-white w-full max-w-lg rounded-[3rem] overflow-hidden shadow-2xl p-10 text-center">
+        <div class="bg-white w-full max-w-lg rounded-[3rem] overflow-hidden shadow-2xl p-10 text-center border-8 border-white">
             <h2 class="text-2xl font-black text-slate-800 mb-2">Processando Mapa...</h2>
+            <p class="text-[10px] font-bold text-slate-400 uppercase tracking-widest mb-6">Verificação de Segurança e Publicidade</p>
+            
             <div class="w-full aspect-video bg-slate-50 rounded-3xl mb-6 flex items-center justify-center border-2 border-dashed border-slate-200">
-                <p class="text-slate-400 text-[10px] font-black uppercase tracking-widest">Anúncio Patrocinado</p>
+                <p class="text-slate-400 text-[10px] font-black uppercase tracking-widest">Espaço Publicitário Google AdSense</p>
             </div>
-            <div id="timer" class="text-5xl font-black text-blue-600 mb-8">5</div>
+
+            <div id="timer" class="text-6xl font-black text-blue-600 mb-8 font-mono">5</div>
             <button id="btn-final" disabled class="w-full py-5 bg-slate-100 text-slate-400 rounded-2xl font-black uppercase tracking-widest text-xs transition-all cursor-not-allowed">
-                Aguarde o Anúncio
+                Aguarde a IA carregar
             </button>
         </div>
     </div>
 
     <script>
-        const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbzPecAjmm21Lcq89pthqXrg4pvQ5_Np-tPrUBtzHO-J368PJiqgisn6RspgM0YaPbcrAg/exec"; 
+        // LIGAÇÃO OFICIAL AO GOOGLE SCRIPT
+        const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbycqzPTvHiv7otMzEA1kHL8fdnE3HiTUPLxIgAd5-q7v1e8FYav5RM1At5narI57phX/exec"; 
 
         async function iniciarMapeamento() {
             const modal = document.getElementById('ad-modal');
@@ -131,8 +135,8 @@
                     btn.disabled = false;
                     btn.classList.replace('bg-slate-100', 'bg-google-blue');
                     btn.classList.replace('text-slate-400', 'text-white');
-                    btn.innerText = "Aceder ao Mapa";
-                    timer.innerHTML = "✨";
+                    btn.innerText = "Aceder às Vagas";
+                    timer.innerHTML = "✓";
                 }
             }, 1000);
 
@@ -143,8 +147,8 @@
                 
                 map.innerHTML = `
                     <div class="absolute inset-0 bg-blue-50 flex items-center justify-center flex-col p-10 animate-pulse">
-                        <div class="w-10 h-10 border-4 border-blue-600 border-t-transparent rounded-full animate-spin mb-4"></div>
-                        <p class="text-blue-900 font-black uppercase tracking-widest text-[10px]">IA a carregar base de dados em ${prov}...</p>
+                        <div class="w-12 h-12 border-4 border-blue-600 border-t-transparent rounded-full animate-spin mb-4"></div>
+                        <p class="text-blue-900 font-black uppercase tracking-widest text-[11px]">Busca profunda activa em ${prov}...</p>
                     </div>`;
 
                 try {
@@ -153,26 +157,31 @@
                     const filtradas = vagas.filter(v => v.provincia === prov);
 
                     if (filtradas.length === 0) {
-                        map.innerHTML = `<div class="text-center p-20"><span class="text-4xl block mb-4">🔭</span><p class="text-slate-400 font-bold uppercase text-[10px]">Sem vagas encontradas em ${prov} esta semana.</p></div>`;
+                        map.innerHTML = `
+                            <div class="text-center p-20 bg-slate-50 w-full h-full flex flex-col items-center justify-center">
+                                <span class="text-5xl block mb-4">🔭</span>
+                                <p class="text-slate-400 font-black uppercase text-[11px] tracking-widest">Nenhuma vaga registada em ${prov} nas últimas 24h.</p>
+                                <p class="text-blue-500 text-[10px] font-bold mt-2">A IA continua a monitorizar novos anúncios.</p>
+                            </div>`;
                         return;
                     }
 
                     map.innerHTML = `<div class="grid grid-cols-1 md:grid-cols-2 gap-4 p-8 overflow-y-auto h-full w-full bg-slate-50">`;
                     filtradas.forEach(v => {
                         map.innerHTML += `
-                            <div class="bg-white p-6 rounded-[2rem] shadow-sm border border-blue-50 flex justify-between items-center">
+                            <div class="bg-white p-6 rounded-[2.5rem] shadow-sm border border-blue-50 flex justify-between items-center hover:border-blue-400 transition-all group">
                                 <div>
-                                    <h4 class="font-extrabold text-slate-800 text-sm">${v.cargo}</h4>
-                                    <p class="text-[10px] text-slate-400 font-bold uppercase">${v.empresa} • ${v.capital}</p>
+                                    <h4 class="font-extrabold text-slate-800 text-sm group-hover:text-blue-600">${v.cargo}</h4>
+                                    <p class="text-[10px] text-slate-400 font-bold uppercase tracking-tighter">${v.empresa} • ${v.capital}</p>
                                 </div>
                                 <span class="px-3 py-1 rounded-full text-[9px] font-black uppercase ${v.status === 'Pago' ? 'bg-orange-100 text-orange-600' : 'bg-blue-100 text-blue-600'}">
-                                    ${v.status === 'Pago' ? '⭐ VIP' : '✓ Verificada'}
+                                    ${v.status === 'Pago' ? '⭐ VIP' : '✓ IA Verificada'}
                                 </span>
                             </div>`;
                     });
                     map.innerHTML += `</div>`;
                 } catch (e) {
-                    map.innerHTML = `<div class="p-10 text-center"><p class="text-red-500 text-[10px] font-bold">Erro de ligação. Verifique se o seu Google Script está publicado para "Qualquer pessoa".</p></div>`;
+                    map.innerHTML = `<div class="p-10 text-center"><p class="text-red-500 text-[10px] font-black uppercase">Erro de Ligação à Base de Dados. Verifique o seu Google Script.</p></div>`;
                 }
             }
         }
